@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆界面</title>
+    <script type="text/javascript">
+        function foo(){
+            if(myform.username.value=="")
+            {
+                alert("请输入用户名");
+                myform.username.focus();
+                return false;
+            }
+            if (myform.password.value=="")
+            {
+                alert("请输入密码");
+                myform.password.focus();
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css">
+    body{
+            background-image: url(image/bc.jpg);
+            background-size: cover;
+
+        }
+        table{
+            background-color: white;
+            position: relative;
+            top: 200px;
+           
+            
+        }
+        table{
+            width: 40%;
+            height: 300px;
+        }
+        input{
+            width: 190px;
+            height: 25px;
+        }
+        .title{
+            background-image: url(image/nav.png);
+
+            background-size: cover;
+            width: 100%;
+            height: 100px;
+            font-size: 17px;
+            color: white;
+        }
+        .but{
+            width: 140px;
+            height: 43px;
+        }
+        .spa{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="login.php"  method="post" onsubmit="return foo();" name="myform" >
+    <table width="400px" border="1" cellpadding="12" cellspacing="1" align="center">
+        <tr>
+            <td colspan="2" class="title">会员登录<span class="spa">[<a style="color: white"  href="index.php">返回首页]</a></span></td>
+        </tr>
+        <tr>
+            <td width="110px">会员ID</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td width="110px">会员密码</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button class="but" style="text-align: center">立即登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
